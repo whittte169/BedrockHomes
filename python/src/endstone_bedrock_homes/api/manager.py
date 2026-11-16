@@ -4,7 +4,6 @@ from typing import Optional
 from endstone.plugin import Plugin
 import threading
 
-
 class HomesManager:
     def __init__(self, plugin: Plugin) -> None:
         self.plugin = plugin
@@ -66,6 +65,21 @@ class HomesManager:
                 self.plugin.logger.error(f"{e}")
                 return []
         return []
+
+    def get_homes_list(self, name: str) -> list[tuple]:
+        if not self.is_database_connected():
+            return []
+        with self.lock:
+            try:
+                with self.connect:
+                    rows = self.connect.execute(
+                        "SELECT * FROM homes WHERE name = ?",
+                        (name,)
+                    ).fetchall()
+                    return rows if rows is not None else []
+            except Exception as e:
+                self.plugin.logger.error(f"{e}")
+                return []
 
     def database_open(self) -> None:
         try:
