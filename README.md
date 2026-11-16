@@ -60,9 +60,7 @@ Players with the home-management permission can also specify a target player:
 | `white.endstone.bedrockhomes.permissions.homemanage` | Allows managing and viewing another player's homes through the commands. | Operators |
 
 ## Documentation
-
-- [C++ Documentation](#) — C++ API documentation.
-- [Python Documentation](#) — Python API documentation, `HomesManager` reference, and examples.
+- [Python Documentation](https://github.com/whittte169/BedrockHomes/blob/main/python/README.md) — Python API documentation, `HomesManager` reference, and examples.
 
 ## Storage
 
