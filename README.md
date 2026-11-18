@@ -23,7 +23,7 @@ It allows players to save named locations and teleport back to them whenever the
 
 ## Installation
 
-1. Download the latest `.whl` package from the [Releases](#) page.
+1. Download the latest `.whl` or `.dll` package from the [Releases](https://github.com/whittte169/BedrockHomes/releases) page.
 2. Place the downloaded file in your Endstone server's `plugins/` directory.
 3. Restart the server.
 
@@ -60,6 +60,8 @@ Players with the home-management permission can also specify a target player:
 | `white.endstone.bedrockhomes.permissions.homemanage` | Allows managing and viewing another player's homes through the commands. | Operators |
 
 ## Documentation
+
+- [C++ Documentation](https://github.com/whittte169/BedrockHomes/blob/main/cpp/README.md) — C++ API documentation.
 - [Python Documentation](https://github.com/whittte169/BedrockHomes/blob/main/python/README.md) — Python API documentation, `HomesManager` reference, and examples.
 
 ## Storage
@@ -78,10 +80,9 @@ The `homes` table stores the player name, home name, position (`x:y:z`), and dim
 
 ## License
 
-BedrockHomes is distributed under the terms of the [LICENSE](#) file.
+BedrockHomes is distributed under the terms of the [LICENSE](https://github.com/whittte169/BedrockHomes/blob/main/LICENSE) file.
 
 ## Links
 
-- [GitHub Repository](#)
-- [Releases](#)
-- [Changelog](#)
+- [GitHub Repository](https://github.com/whittte169/BedrockHomes)
+- [Releases](https://github.com/whittte169/BedrockHomes/releases)
