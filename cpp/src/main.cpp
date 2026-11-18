@@ -21,7 +21,7 @@ ENDSTONE_PLUGIN("bedrock_homes", "1.0.0-beta", Main)
     
     command("homes")
         .description("Get list of home points")
-        .usages("/homes <home: str>", "/homes <home: str> [player: str]")
+        .usages("/homes", "/homes [player: str]")
         .permissions("white.endstone.bedrockhomes.commands.home");
 
     permission("white.endstone.bedrockhomes.commands.home")

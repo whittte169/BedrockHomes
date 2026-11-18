@@ -65,7 +65,7 @@ public:
     void createHome(std::string name, std::string home, std::string position, std::string dimension) {
         try {
             database << "INSERT OR IGNORE INTO homes (name, home, position, dimension) VALUES (?, ?, ?, ?);"
-            << name, home, position, dimension;
+                     << name << home << position << dimension;
         } catch (const std::exception &e) {
             plugin.getLogger().error(std::string("Failed to load database! ") + e.what());
         }
@@ -74,7 +74,7 @@ public:
     void deleteHome(std::string name, std::string home) {
         try {
             database << "DELETE FROM homes WHERE name = ? AND home = ?;"
-            << name, home;
+                     << name << home;
         } catch (const std::exception &e) {
             plugin.getLogger().error(std::string("Failed to load database! ") + e.what());
         }

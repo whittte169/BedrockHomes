@@ -1,11 +1,6 @@
 
 #pragma once
-#include <concepts>
 #include <endstone/endstone.hpp>
-#include <endstone/player.h>
-#include <endstone/level/level.h>
-#include <endstone/level/dimension.h>
-#include <endstone/level/location.h>
 #include <string>
 #include <sstream>
 #include <array>
@@ -121,7 +116,7 @@ public:
                 target = args[1];
             }
             endstone::Location location = player->getLocation();
-            std::string dimension = location.getDimension().getName();
+            std::string dimension = player->getDimension().getName();
             std::string position =
                 std::to_string(location.getX()) + ":" +
                 std::to_string(location.getY()) + ":" +
